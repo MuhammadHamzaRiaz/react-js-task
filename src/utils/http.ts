@@ -1,6 +1,5 @@
 import axios from "axios";
-
-const API_BASE_URL = "https://dummyjson.com/"; // Replace with your actual API base URL
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const http = async (endpoint: string, method: "GET") => {
   try {
