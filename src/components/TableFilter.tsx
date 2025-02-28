@@ -95,7 +95,7 @@ const TableFilter = <T,>({ options, onFilterChange }: TableFilterProps<T>) => {
         </div>
       </div>
       {activeFilters.length > 0 && (
-        <div className="flex flex-wrap gap-2 min-w-max">
+        <div className="flex flex-wrap gap-2 ml-2 min-w-max">
           {activeFilters.map((filter, index) => {
             const filterOption = options.find((opt) => String(opt.key) === filter.key);
             return (
