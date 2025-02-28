@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Neutra Text";
+  src: url("/fonts/NeutraText-Book.woff2") format("woff2"),
+    url("/fonts/NeutraText-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neutra Text";
+  src: url("/fonts/NeutraText-Bold.woff2") format("woff2"),
+    url("/fonts/NeutraText-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-neutra: "Neutra Text";
+  --color-grey: #ebebeb;
+  --color-blue: #c0e3e5;
+  --color-yellow: #fdc936;
+  --color-black: #322625;
+}
+
+:root {
+  font-family: var(--font-neutra);
+}
+
+::-webkit-scrollbar {
+  background-color: var(--color-grey);
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: var(--color-blue);
+  cursor: pointer;
+}
