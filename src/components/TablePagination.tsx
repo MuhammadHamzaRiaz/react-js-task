@@ -39,7 +39,7 @@ const TablePagination = ({ currentPage, totalPages, onPageChange }: PaginationPr
       <button
         onClick={() => onPageChange(1)}
         disabled={currentPage === 1}
-        className="p-2 rounded-md hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="p-2 rounded-md hover:bg-gray-100 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
         aria-label="First page"
       >
         <ChevronsLeft size={20} />
@@ -48,7 +48,7 @@ const TablePagination = ({ currentPage, totalPages, onPageChange }: PaginationPr
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="p-2 rounded-md hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="p-2 rounded-md hover:bg-gray-100 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
         aria-label="Previous page"
       >
         <ChevronLeft size={20} />
@@ -58,7 +58,7 @@ const TablePagination = ({ currentPage, totalPages, onPageChange }: PaginationPr
           <button
             key={page}
             onClick={() => onPageChange(page)}
-            className={`h-8 w-8 flex items-center justify-center rounded-md transition-colors ${
+            className={`h-8 w-8 flex items-center cursor-pointer justify-center rounded-md transition-colors ${
               currentPage === page ? "bg-yellow text-white font-medium" : "hover:bg-gray-100"
             }`}
           >
@@ -70,7 +70,7 @@ const TablePagination = ({ currentPage, totalPages, onPageChange }: PaginationPr
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="p-2 rounded-md hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="p-2 rounded-md hover:bg-gray-100 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
         aria-label="Next page"
       >
         <ChevronRight size={20} />
@@ -79,7 +79,7 @@ const TablePagination = ({ currentPage, totalPages, onPageChange }: PaginationPr
       <button
         onClick={() => onPageChange(totalPages)}
         disabled={currentPage === totalPages}
-        className="p-2 rounded-md hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="p-2 rounded-md hover:bg-gray-100 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
         aria-label="Last page"
       >
         <ChevronsRight size={20} />
